@@ -1,0 +1,27 @@
+/* For screens up to 768px */
+@media (max-width: 768px) {
+    #contact-section > div {
+        width: auto !important;
+        margin: 20px !important;
+    }
+}
+
+/* For screens up to 480px */
+@media (max-width: 480px) {
+    #contact-section {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    #contact-section > div {
+        width: 90% !important;
+        margin: 20px auto !important;
+    }
+    .contact-details h1 {
+        font-size: 30px;
+    }
+    .contact-details div {
+        font-size: 20px;
+    }
+}

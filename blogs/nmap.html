@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nmap Guide - Umar_Hacks</title>
+  <style>
+    body {
+      background-color: #0b1120; /* Dark Navy Blue */
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    h1, h2, h3 {
+      color: #58a6ff;
+    }
+
+    pre {
+      background-color: #1c2331;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    code {
+      color: #ffcb6b;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    a {
+      color: #4fd1c5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      border: 1px solid #2d3748;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Nmap Guide for Beginners</h1>
+
+    <div class="section">
+      <h2>🔍 What is Nmap?</h2>
+      <p>
+        Nmap (Network Mapper) is an open-source tool used for network discovery and security auditing.
+        It’s widely used by cybersecurity professionals and ethical hackers to scan hosts and discover services,
+        ports, operating systems, and vulnerabilities.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>🔧 How to Install Nmap</h2>
+      <h3>📥 Linux (Debian/Ubuntu)</h3>
+      <pre><code>sudo apt update
+sudo apt install nmap</code></pre>
+
+      <h3>📥 Kali Linux</h3>
+      <p>Already pre-installed.</p>
+
+      <h3>📥 Windows</h3>
+      <p>Download from the official website: <a href="https://nmap.org" target="_blank">https://nmap.org</a></p>
+
+      <h3>📥 macOS (with Homebrew)</h3>
+      <pre><code>brew install nmap</code></pre>
+    </div>
+
+    <div class="section">
+      <h2>🧪 What are Scan Types?</h2>
+      <ul>
+        <li><strong>SYN Scan</strong> (<code>-sS</code>) – Stealthy and fast</li>
+        <li><strong>TCP Connect Scan</strong> (<code>-sT</code>) – Uses full TCP handshake</li>
+        <li><strong>UDP Scan</strong> (<code>-sU</code>) – Finds open UDP ports</li>
+        <li><strong>Ping Scan</strong> (<code>-sn</code>) – Checks if a host is up</li>
+        <li><strong>Aggressive Scan</strong> (<code>-A</code>) – Full system discovery</li>
+        <li><strong>Version Detection</strong> (<code>-sV</code>) – Detects service versions</li>
+        <li><strong>OS Detection</strong> (<code>-O</code>) – Identifies OS type</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🤝 What is TCP Handshake?</h2>
+      <p>The TCP Handshake is a three-step process to establish a connection:</p>
+      <ol>
+        <li><strong>SYN</strong> – Client requests connection</li>
+        <li><strong>SYN-ACK</strong> – Server acknowledges and responds</li>
+        <li><strong>ACK</strong> – Client confirms, connection is made</li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>💻 Basic Commands of Nmap</h2>
+      <pre><code>nmap &lt;target&gt;               # Simple scan
+nmap -sS &lt;target&gt;           # SYN scan
+nmap -sV &lt;target&gt;           # Detect service versions
+nmap -O &lt;target&gt;            # OS detection
+nmap -A &lt;target&gt;            # Aggressive scan
+nmap -p 80 &lt;target&gt;         # Scan specific port
+nmap 192.168.1.1/24         # Scan entire subnet</code></pre>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
